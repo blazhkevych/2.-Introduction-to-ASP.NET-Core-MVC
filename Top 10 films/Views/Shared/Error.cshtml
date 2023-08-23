@@ -1,23 +1,27 @@
-﻿@model ErrorViewModel
+﻿<!-- Define the model for this view as ErrorViewModel -->
+@model ErrorViewModel
+<!-- Set the title of the view to "Error" -->
 @{
     ViewData["Title"] = "Error";
 }
-
+<!-- Display an error message -->
 <h1 class="text-danger">Error.</h1>
 <h2 class="text-danger">An error occurred while processing your request.</h2>
-
+<!-- If the ShowRequestId property of the model is true, display the Request ID -->
 @if (Model.ShowRequestId)
 {
     <p>
+        <!-- Display the Request ID -->
         <strong>Request ID:</strong> <code>@Model.RequestId</code>
     </p>
 }
-
+<!-- Display a message about the Development environment -->
 <h3>Development Mode</h3>
 <p>
     Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
 </p>
 <p>
+    <!-- Warn about the risks of enabling the Development environment in a deployed application -->
     <strong>The Development environment shouldn't be enabled for deployed applications.</strong>
     It can result in displaying sensitive information from exceptions to end users.
     For local debugging, enable the <strong>Development</strong> environment by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>

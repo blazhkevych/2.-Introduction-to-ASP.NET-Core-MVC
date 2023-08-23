@@ -1,8 +1,12 @@
-namespace Top_10_films.Models;
-
-public class ErrorViewModel
+namespace Top_10_films.Models
 {
-    public string? RequestId { get; set; }
-
-    public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+    // Define the ErrorViewModel class
+    public class ErrorViewModel
+    {
+        // Declare a nullable string property for the RequestId
+        public string? RequestId { get; set; }
+        // Declare a boolean property ShowRequestId
+        // This property returns true if RequestId is not null or empty
+        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+    }
 }

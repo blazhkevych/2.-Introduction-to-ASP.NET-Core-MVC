@@ -1,4 +1,5 @@
 // Create a new WebApplication builder with the provided command-line arguments
+
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container
 // In this case, we're adding the controllers and views services to the container
@@ -14,6 +15,7 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
 // Use HTTPS redirection middleware to redirect HTTP requests to HTTPS
 app.UseHttpsRedirection();
 // Use static files middleware to serve static files

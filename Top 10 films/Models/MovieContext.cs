@@ -25,7 +25,7 @@ public class MovieContext : DbContext
                 Director = "Frank Darabont",
                 Genre = "Drama",
                 ReleaseYear = 1994,
-                PosterUrl = "img\\The_Shawshank_Redemption_(1994).jpg",
+                PosterUrl = "~/img/The_Shawshank_Redemption_1994.jpg",
                 Description =
                     "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion."
             });
@@ -124,7 +124,7 @@ public class MovieContext : DbContext
                 Director = "Sergio Leone",
                 Genre = "Western",
                 ReleaseYear = 1966,
-                PosterUrl = "img\\The_Good_the_Bad_and_the_Ugly_(1966).jpg",
+                PosterUrl = "~/img/The_Good_the_Bad_and_the_Ugly_1966.jpg",
                 Description =
                     "A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery."
             });

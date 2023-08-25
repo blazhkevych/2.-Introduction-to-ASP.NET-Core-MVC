@@ -1,4 +1,13 @@
 ﻿@{
-    // Set the layout of the view to "_Layout"
+    // This is a Razor syntax block. Razor is a markup syntax for embedding server-based code into webpages.
+    // The "@" character denotes the start of a code block in Razor syntax.
+    // The "Layout" property is a special property in Razor views that specifies the layout file for the view.
+    // Layout files are like master pages in ASP.NET Web Forms or the main template file in a PHP application.
+    // They allow you to define a common structure for your site, and then fill in the unique details for each page with views.
+    // Here, the "Layout" property is being set to "_Layout", which means the layout file named "_Layout.cshtml" will be used for this view.
+    // This layout file is typically located in the "Views/Shared" folder in an ASP.NET Core MVC application.
+    // This code block is executed when the view is rendered. 
+    // Before the view's HTML is sent to the client, the server executes the code in this block, 
+    // sets the layout for the view, and then inserts the view's HTML into the layout at the render body call.
     Layout = "_Layout";
 }

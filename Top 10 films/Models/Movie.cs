@@ -1,4 +1,5 @@
 ﻿// Define the namespace for the models
+
 namespace Top_10_films.Models;
 
 // Define the Movie class

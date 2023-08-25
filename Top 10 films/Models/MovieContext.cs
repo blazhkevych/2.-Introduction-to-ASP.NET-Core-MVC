@@ -1,12 +1,16 @@
 ﻿// Importing the necessary namespace for Entity Framework Core
+
 using Microsoft.EntityFrameworkCore;
+
 // Defining the namespace for the models
 namespace Top_10_films.Models;
+
 // Creating a class that inherits from DbContext to interact with the database
 public class MovieContext : DbContext
 {
     // Defining a DbSet property for the Movie model
     public DbSet<Movie> Movies { get; set; }
+
     // Constructor for the MovieContext class
     public MovieContext(DbContextOptions<MovieContext> options) : base(options)
     {

@@ -5,7 +5,7 @@ namespace Top_10_films.Controllers;
 
 public class MovieController : Controller
 {
-    MovieContext _context;
+    private MovieContext _context;
 
     public MovieController(MovieContext context)
     {

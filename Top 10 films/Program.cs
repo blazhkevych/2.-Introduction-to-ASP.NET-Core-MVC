@@ -1,6 +1,12 @@
+// Importing the necessary namespaces
+using Microsoft.EntityFrameworkCore;
+using Top_10_films.Models;
 // Create a new WebApplication builder with the provided command-line arguments
-
 var builder = WebApplication.CreateBuilder(args);
+// Retrieve the connection string from the configuration
+string? connection = builder.Configuration.GetConnectionString("DefaultConnection");
+// Add the DbContext to the service collection, configuring it to use SQL Server with the connection string
+builder.Services.AddDbContext<MovieContext>(options => options.UseSqlServer(connection));
 // Add services to the container
 // In this case, we're adding the controllers and views services to the container
 builder.Services.AddControllersWithViews();
@@ -15,7 +21,6 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-
 // Use HTTPS redirection middleware to redirect HTTP requests to HTTPS
 app.UseHttpsRedirection();
 // Use static files middleware to serve static files
@@ -27,6 +32,6 @@ app.UseAuthorization();
 // Map the default controller route
 app.MapControllerRoute(
     "default",
-    "{controller=Home}/{action=Index}/{id?}");
+    "{controller=Movie}/{action=Index}/{id?}");
 // Run the application
 app.Run();

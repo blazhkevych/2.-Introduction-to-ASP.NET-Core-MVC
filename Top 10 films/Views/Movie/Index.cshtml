@@ -8,10 +8,21 @@
                     <img src="@Url.Content(m.PosterUrl)" alt="@m.Title" />
                 </div>
                 <div class="MovieDataContainer">
-                    <div class="movieTitleContainer">
+                    <div class="movieTitle">
                         @m.Title
                     </div>
-
+                    <div class="movieDirector">
+                        @m.Director
+                    </div>
+                    <div class="movieGenre">
+                        @m.Genre
+                    </div>
+                    <div class="movieReleaseYear">
+                        @m.ReleaseYear
+                    </div>
+                    <div class="movieDescription">
+                        @m.Description
+                    </div>
                 </div>
             </li>
         }

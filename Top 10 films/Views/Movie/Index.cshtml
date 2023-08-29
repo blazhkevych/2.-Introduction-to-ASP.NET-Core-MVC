@@ -1,18 +1,20 @@
 ﻿<div>
     <h3>@ViewBag.Title</h3>
-    <ul>
+    <ul class="main_list_container">
         @foreach (var m in ViewBag.Movies)
         {
-            <li>
-                @* прямоугольник для каждого фильма и всей инфы дял него *@
-                <div>
-                    @* контейнер для постера *@
-                    <div>
-                        @* собственно сам постер *@
-                        <img src="@m.PosterUrl" alt="@m.Title" />
+            <li class="main_movie_container">
+                <div class="posterContainer">
+                    <img src="@Url.Content(m.PosterUrl)" alt="@m.Title" />
+                </div>
+                <div class="MovieDataContainer">
+                    <div class="movieTitleContainer">
+                        @m.Title
                     </div>
+
                 </div>
             </li>
         }
     </ul>
 </div>
+

@@ -12,35 +12,11 @@
     <!-- Link to the site specific CSS -->
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <!-- Link to the Top_10_films specific CSS -->
-    <link rel="stylesheet" href="~/Top_10_films.styles.css" asp-append-version="true" /> @* TODO: write some style for this page *@
+    <link rel="stylesheet" href="~/css/body.css" asp-append-version="true" />
 </head>
 <body>
 <header>
-    <!-- Define a navigation bar -->
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container-fluid">
-            <!-- Define a brand link to the home page -->
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Top 10 films</a>
-            <!-- Define a button for toggling the navigation bar on small screens -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Define the collapsible part of the navigation bar -->
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <!-- Define a navigation item for the home page -->
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
-                    <!-- Define a navigation item for the privacy page -->
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+   
 </header>
 <div class="container">
     <!-- Define the main content of the document -->
@@ -50,10 +26,7 @@
 </div>
 <!-- Define the footer of the document -->
 <footer class="border-top footer text-muted">
-    <div class="container">
-        <!-- Define the copyright notice and a link to the privacy page -->
-        &copy; @DateTime.Now.Year - Top 10 films - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-    </div>
+
 </footer>
 <!-- Link to the jQuery library -->
 <script src="~/lib/jquery/dist/jquery.min.js"></script>

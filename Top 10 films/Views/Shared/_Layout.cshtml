@@ -2,30 +2,26 @@
 <html lang="en">
 <head>
     <!-- Set the character encoding for the document -->
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <!-- Set the viewport of the document to scale to the device width, initial scale 1.0 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Set the title of the document to the ViewData Title and append "Top_10_films" -->
     <title>@ViewData["Title"]</title>
     <!-- Link to the Bootstrap CSS library -->
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <!-- Link to the Top_10_films specific CSS -->
-    <link rel="stylesheet" href="~/css/RenderBodyPart.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
 </head>
 <body>
 <header>
-   
+    <div class="text-center">
+        <h1>@ViewBag.Title</h1>
+    </div>
 </header>
-<div class="container">
-    <!-- Define the main content of the document -->
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
-</div>
-<!-- Define the footer of the document -->
-<footer class="border-top footer text-muted">
-
-</footer>
+<!-- Define the main content of the document -->
+<main role="main">
+    @RenderBody()
+</main>
 <!-- Link to the jQuery library -->
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <!-- Link to the Bootstrap JavaScript bundle -->

@@ -8,37 +8,53 @@ a.navbar-brand {
     text-align: center;
     word-break: break-all;
 }
+
 /* Change the color of all anchor tags to a specific shade of blue */
+
 a { color: #0077cc; }
+
 /* Style for primary buttons. 
 The text color is white, and the background and border colors are different shades of blue */
+
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;
     border-color: #1861ac;
 }
+
 /* Style for active links in a navigation pills component. 
 The text color is white, and the background and border colors are different shades of blue */
+
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: #fff;
     background-color: #1b6ec2;
     border-color: #1861ac;
 }
+
 /* Utility class to add a top border to an element */
+
 .border-top { border-top: 1px solid #e5e5e5; }
+
 /* Utility class to add a bottom border to an element */
+
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
+
 /* Utility class to add a box shadow to an element */
+
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
 /* Style for the button that users click to accept the site's policy. 
 The font size is set to 1rem and the line height is inherited from the parent element */
+
 button.accept-policy {
     font-size: 1rem;
     line-height: inherit;
 }
+
 /* Style for the footer. 
 It is positioned at the bottom of the page, spans the full width of the page, 
 and has a line height of 60px to give it some vertical padding */
+
 .footer {
     position: absolute;
     bottom: 0;

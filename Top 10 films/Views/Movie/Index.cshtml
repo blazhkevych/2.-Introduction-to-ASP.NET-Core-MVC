@@ -1,31 +1,27 @@
-﻿<div>
-    <h3>@ViewBag.Title</h3>
-    <ul class="main_list_container">
-        @foreach (var m in ViewBag.Movies)
-        {
-            <li class="main_movie_container">
-                <div class="posterContainer">
-                    <img src="@Url.Content(m.PosterUrl)" alt="@m.Title" />
+﻿<ul class="main_list_container">
+    @foreach (var m in ViewBag.Movies)
+    {
+        <li class="main_movie_container">
+            <div class="posterContainer">
+                <img src="@m.PosterUrl" alt="@m.Title"/>
+            </div>
+            <div class="MovieDataContainer">
+                <div class="movieTitle">
+                    @m.Title
                 </div>
-                <div class="MovieDataContainer">
-                    <div class="movieTitle">
-                        @m.Title
-                    </div>
-                    <div class="movieDirector">
-                        @m.Director
-                    </div>
-                    <div class="movieGenre">
-                        @m.Genre
-                    </div>
-                    <div class="movieReleaseYear">
-                        @m.ReleaseYear
-                    </div>
-                    <div class="movieDescription">
-                        @m.Description
-                    </div>
+                <div class="movieDirector">
+                    @m.Director
                 </div>
-            </li>
-        }
-    </ul>
-</div>
-
+                <div class="movieGenre">
+                    @m.Genre
+                </div>
+                <div class="movieReleaseYear">
+                    @m.ReleaseYear
+                </div>
+                <div class="movieDescription">
+                    @m.Description
+                </div>
+            </div>
+        </li>
+    }
+</ul>

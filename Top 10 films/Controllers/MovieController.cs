@@ -1,23 +1,31 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿// Import the necessary namespaces
+using Microsoft.AspNetCore.Mvc;
 using Top_10_films.Models;
-
-namespace Top_10_films.Controllers;
-
-public class MovieController : Controller
+// Define the namespace for the controller
+namespace Top_10_films.Controllers
 {
-    private MovieContext _context;
-
-    public MovieController(MovieContext context)
+    // Define a public class 'MovieController' that inherits from the 'Controller' base class
+    public class MovieController : Controller
     {
-        _context = context;
-    }
-
-    public async Task<IActionResult> Index()
-    {
-        IEnumerable<Movie> movies = await Task.Run(() => _context.Movies);
-        ViewBag.Movies = movies;
-        ViewBag.Title = "Top 10 Films";
-
-        return View("Index");
+        // Declare a private variable '_context' of type 'MovieContext'
+        private MovieContext _context;
+        // Define a public constructor for the 'MovieController' class that takes a 'MovieContext' object as a parameter
+        public MovieController(MovieContext context)
+        {
+            // Assign the passed 'context' to the private '_context' variable
+            _context = context;
+        }
+        // Define a public asynchronous method 'Index' that returns an 'IActionResult'
+        public async Task<IActionResult> Index()
+        {
+            // Declare a variable 'movies' of type 'IEnumerable<Movie>' and assign it the result of a Task that returns all movies from the '_context'
+            IEnumerable<Movie> movies = await Task.Run(() => _context.Movies);
+            // Assign the 'movies' to the 'ViewBag.Movies' property
+            ViewBag.Movies = movies;
+            // Assign the string "Top 10 Films" to the 'ViewBag.Title' property
+            ViewBag.Title = "Top 10 Films";
+            // Return the view named "Index"
+            return View("Index");
+        }
     }
 }
